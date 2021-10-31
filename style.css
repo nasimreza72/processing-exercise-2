@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(black,yellow); */
+}
+
+.page {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.processing-item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.processing-container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.processing-label {
+    position: absolute;
+    top: 120px;
+}
+
+.processing-container div:first-child {
+    animation-name: nasim;
+    opacity: 0;
+    animation-duration: 1s;
+    /* animation-iteration-count: infinite; */
+
+}
+
+.processing-container div:nth-child(2) {
+    animation-name: henrik;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: 3;
+    /* animation-fill-mode: forwards; */
+}
+
+.processing-container div:nth-child(3) {
+    animation-name: jay;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nasim {
+    0% {
+        left: 100px;
+        opacity: 1;
+    }
+
+    50% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        left: -100px;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes henrik{
+    0%{
+        left: 100px; opacity: 1;
+    }
+
+    50%{
+        left: 0px; opacity: 1; transform: scale(1.2);
+    }
+
+    100%{
+        left: -100px; opacity: 0; transform: scale(1);
+    }
+}
+
+@keyframes jay{
+    0%{
+        opacity: 1;
+        top: -100px;
+    }
+    
+    25%{
+        opacity: 1;
+        top: 0px;
+    }
+
+    50%{
+        opacity: 1;
+        top: 25px;
+        
+    }
+
+    75%{
+        opacity: 1;
+        top: -25px;
+    }
+
+    100%{
+        bottom: 0px; opacity: 1;
+    }
+}
+
+span:first-of-type{
+    animation-name: processing;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+}
+
+span:last-of-type{
+    animation-name: done;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    left: 50%;
+    transform: translateX(-50%);
+  
+}
+
+@keyframes processing{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ 
+}
+
+@keyframes done{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ 
+}
+
+/* @keyframes henrik {
+    0% {
+        left: 100px;
+        opacity: 1;
+        transform: scale(.5);
+    }
+
+    10% {
+        left: 50px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+
+    20% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    30% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+
+    35% {
+        left: 0px;
+        opacity: 0;
+        transform:;
+    }
+
+    40% {
+        left: 100px;
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    50% {
+        left: 50px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+
+    55% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    60% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+
+    70% {
+        left: -100px;
+        opacity: 0;
+        transform: scale(.75);
+    }
+
+    80% {
+        left: -25px;
+        opacity: 1;
+        transform: scale(.5);
+    }
+
+    85% {
+        left: 50px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+
+    90% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    100% {
+        left: 0px;
+        opacity: 1;
+        transform: scale(.75);
+    }
+} */
